@@ -15,7 +15,7 @@ int main(){
 	
 	for(int i = 0; i < LIN; i++){
 		for(int j = 0; j < COL; j++){
-			printf("Digite o valor da posição [%d][%d]: ", i, j);
+			printf("Digite o valor da posiÃ§Ã£o [%d][%d]: ", i, j);
 			scanf("%f", &matriz_original[i][j]);
 		}
 	}
