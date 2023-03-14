@@ -10,11 +10,11 @@ int main(){
 	int matriz_original[LIN][COL];
 	int matriz_reflexao[LIN][COL];
 	
-	printf("\t\t\t\t\tMATRIZ REFLEX√O\n\n");
+	printf("\t\t\t\t\tMATRIZ REFLEX√ÉO\n\n");
 	
 	for(int i = 0; i < LIN; i++){
 		for(int j = 0; j < COL; j++){
-			printf("Digite o valor da posiÁ„o [%d][%d]: ", i, j);
+		printf("Digite o valor da posi√ß√£o [%d][%d]: ", i, j);
 			scanf("%d", &matriz_original[i][j]);
 		}
 	}
@@ -29,11 +29,15 @@ int main(){
 		
 	for(int i = 0; i < LIN; i++) {
 	    for(int j = 0; j < COL; j++) {
-	    	matriz_reflexao[i][j] = matriz_original[i][COL - 1 - j];
+	    	if(j == 0) {
+	    		matriz_reflexao[i][j] = -matriz_original[i][j];	
+			} else {
+				matriz_reflexao[i][j] = matriz_original[i][j];
+			}
 	    }
 	}
 	
-	printf("\nMatriz reflex„o ao eixo y:\n");
+	printf("\nMatriz reflex√£o ao eixo y:\n");
 	for(int i = 0; i < LIN; i++){
 		for(int j = 0; j < COL; j++){
 			printf("%d\t", matriz_reflexao[i][j]);
